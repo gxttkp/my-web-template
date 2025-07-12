@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+        <link href="style.css" rel="stylesheet">
+        
+        <title>เกาะล้าน @iKL</title>
+        <link rel="icon" type="image/png" href="images/island.png">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="">@iKL</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#resort">ที่พัก</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#restaurant">ร้านอาหาร</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#travel">การเดินทาง</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#beach">ชายหาด</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#activity">กิจกรรม</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>     
+        </nav>
+
+        <div class="container">
+            <div class="main-kohlarn">
+                <img src="images/main.jpg" class="main-img " alt="ภาพเกาะล้าน">
+                <div class="text">
+                    <span class="title">เกาะล้าน</span>
+                    <span class="description">เป็นหนึ่งในจุดหมายปลายทางยอดนิยมของนักท่องเที่ยวทั้งชาวไทยและต่างชาติ 
+                        ตั้งอยู่ห่างจากชายฝั่งเมืองพัทยาเพียง 7 กิโลเมตร ด้วยความงดงามของธรรมชาติ น้ำทะเลใสสะอาด 
+                        หาดทรายขาวละเอียดและกิจกรรมหลากหลายเกาะล้านจึงเป็นสถานที่ที่เหมาะสำหรับการพักผ่อนและการผจญภัยกลางทะเล
+                    </span>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <div class="row icon-kohlarn-button">
+                    <div class="card p-1 col-xxl-2 col-xl-2 col-md-2 col-3 d-flex flex-column align-items-center">
+                        <a href="#resort">
+                            <div class="mb-3 mt-2"><img src="images/icon/main/resort.png" class="icon img-fluid"></div>
+                            <h6 >resort</h6> <p>ที่พัก</p>
+                        </a>
+                    </div>
+
+                    <div class="card p-1 col-xxl-2 col-xl-2 col-md-2 col-3 d-flex flex-column align-items-center">
+                        <a href="#restaurant">
+                            <div class="mb-3 mt-2"><img src="images/icon/main/restaurant.png" class="icon img-fluid"></div>
+                            <h6>restaurant</h6> <p>ร้านอาหาร</p>
+                        </a>
+                    </div>
+
+                    <div class="card p-1 col-xxl-2 col-xl-2 col-md-2 col-3  d-flex flex-column align-items-center">
+                        <a href="#travel">
+                            <div class="mb-3 mt-2"><img src="images/icon/main/touring.png" class="icon img-fluid"></div>
+                            <h6>Travel</h6> <p>การเดินทาง</p>
+                        </a>
+                    </div>
+
+                    <div class="card p-1 col-xxl-2 col-xl-2 col-md-2 col-3 d-flex flex-column align-items-center">
+                        <a href="#beach">
+                            <div class="mb-3 mt-2"><img src="images/icon/main/beach.png" class="icon img-fluid"></div>
+                            <h6>Beach</h6> <p>ชายหาด</p>
+                        </a>
+                    </div>
+
+                    <div class="card p-1 col-xxl-2  col-xl-2 col-md-2 col-3  d-flex flex-column align-items-center">
+                        <a href="#activity">
+                            <div class="mb-3 mt-2"><img src="images/icon/main/diving-mask.png" class="icon img-fluid"></div>
+                            <h6>Activity</h6> <p>กิจกรรม</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resort" id="resort">
+                <p class="nav-text">nav-text</p>
+                <h3>ที่พักบนเกาะล้าน</h3>
+                <p>ที่พักบนเกาะล้านมีให้เลือกหลากหลายสไตล์ ไม่ว่าจะเป็นรีสอร์ตสุดหรูติดทะเล บังกะโลบรรยากาศอบอุ่น หรือโฮมสเตย์ราคาประหยัด 
+                    นักท่องเที่ยวสามารถเลือกที่พักตามความต้องการ ไม่ว่าจะเป็นที่พักสำหรับการพักผ่อนแบบส่วนตัว ที่พักใกล้ชายหาดสำหรับชมวิวพระอาทิตย์ตก 
+                    หรือที่พักในตัวหมู่บ้านที่สะดวกต่อการเดินทางไปยังร้านอาหารและท่าเรือ</p>
+                <div class="resort-1 mt-4">
+                    <h4>1. ที่พักเกาะล้านรีสอร์ท</h4>
+                    <p class="mt-2"><span>NAIA Resort Koh Larn : </span>
+                        รีสอร์ทที่ตั้งอยู่ริมชายหาด มอบความเป็นส่วนตัวและความเงียบสงบ เหมาะสำหรับผู้ที่ต้องการการพักผ่อนอย่างแท้จริง พร้อมสิ่งอำนวยความสะดวกครบครันและวิวทะเลที่งดงาม</p>
+                    <img src="images/resort/01.jpg">
+                    <ul>
+                        <li><a href="https://www.facebook.com/naia.resort.kohlarn/?locale=th_TH" target="_blank">เพจ : ดูรายละเอียดเพิ่มเติมและจองห้องพักได้ที่นี่ </a></li>
+                        <li><a href="https://www.agoda.com/th-th/naia-resort-kohlarn/hotel/pattaya-th.html?locale=th-th&ckuid=2a9bdbfe-cd0c-4379-8d07-533351e6eda4&prid=0&currency=THB&correlationId=b3389199-d7ec-4e87-b9fe-de61e2dc6097&analyticsSessionId=4496972750311246057&pageTypeId=7&realLanguageId=22&languageId=22&origin=TH&stateCode=50&cid=1919571&tag=3c5d815d-a417-4717-a783-2560673ea51b&userId=2a9bdbfe-cd0c-4379-8d07-533351e6eda4&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=6&currencyCode=THB&htmlLanguage=th-th&cultureInfoName=th-th&machineName=sg-pc-6h-acm-web-user-6dbf69ff85-wrz2w&trafficGroupId=5&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Chrome&cdnDomain=agoda.net&checkIn=2025-02-14&checkOut=2025-02-15&rooms=1&adults=2&childs=0&priceCur=THB&los=1&textToSearch=%E0%B9%84%E0%B8%99%E0%B8%AD%E0%B8%B2+%E0%B8%A3%E0%B8%B5%E0%B8%AA%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%97+%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99&productType=-1&travellerType=1&familyMode=off&ds=HHHj1oGxDqnvMftd" target="_blank">Agoda : ดูรีวิวและสิ่งอำนวยความสะดวกของที่พักก่อนตัดสินใจ </a></li>
+                        <li><a href="https://th.trip.com/hotels/list?city=35996&cityName=Koh%20Larn&provinceId=10087&countryId=4&districtId=0&checkin=2025-02-05&checkout=2025-02-06&barCurr=THB&lat=12.9312604&lon=100.7888078&searchType=LM&searchWord=NAIA%20Resort%2C%20KohLarn%20(%E0%B9%84%E0%B8%99%E0%B8%AD%E0%B8%B2)&searchValue=131~0*131*12.9312604~100.7888078~NAIA%20Resort%2C%20KohLarn%20(%E0%B9%84%E0%B8%99%E0%B8%AD%E0%B8%B2)~0*1&searchCoordinate=BAIDU_0_0_0~GAODE_0_0_0~GOOGLE_12.9312604_100.7888078_0~NORMAL_12.9312604_100.7888078_0&crn=1&adult=2&children=0&searchBoxArg=t&ctm_ref=ix_sb_dl&travelPurpose=0&domestic=false&listFilters=17~5*17*5*2%2C80~0~1*80*0*2" target="_blank">ที่พักใกล้ๆ : เปรียบเทียบที่พักและเลือกที่พักที่ดีที่สุดสำหรับคุณ</a></li>
+                        <li><a href="https://www.google.com/maps/dir/%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2,+%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%B5%E0%B8%AE%E0%B8%B2%E0%B8%A2+-+%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99,+%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99/%E0%B8%8B%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B8%94%E0%B8%B9+%E0%B8%9A%E0%B8%B5%E0%B8%8A+%E0%B8%A3%E0%B8%B5%E0%B8%AA%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%97+%E0%B8%AD%E0%B8%B3%E0%B9%80%E0%B8%A0%E0%B8%AD%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B8%E0%B8%87+%E0%B8%8A%E0%B8%A5%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5/@12.912948,100.7755966,15.79z/data=!4m19!4m18!1m10!1m1!1s0x3102963e1f257af5:0x977e8d515f33a33a!2m2!1d100.8058747!2d12.9228548!3m4!1m2!1d100.7900356!2d12.9224745!3s0x3102983ccdf6c235:0x6172d3ff4944ce13!1m5!1m1!1s0x3102983855555555:0x490fb2f4641b1aa0!2m2!1d100.7709883!2d12.9119871!3e9?entry=ttu&g_ep=EgoyMDI1MDIwMi4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D" target="_blank">Map : การเดินทางจากท่าเรือไปยังที่พัก</a></li>
+                    </ul>
+                </div>
+
+                <div class="resort-2 mt-4">
+                    <h4>2. ที่พักสไตล์มินิมอล</h4>
+                    <p class="mt-2"><span>Kamari Cafe & Resort Kohlarn : </span>
+                        ที่พักสุดเก๋ในสไตล์มินิมอลที่ได้รับแรงบันดาลใจจากซานโตรินี มีสระว่ายน้ำส่วนตัวและคาเฟ่ในตัว เหมาะสำหรับผู้ที่ชื่นชอบบรรยากาศเรียบง่ายแต่มีสไตล์</p>
+                    <img src="images/resort/02.jpg">
+                    <ul>
+                        <li><a href="https://www.facebook.com/Kamariresort/" target="_blank">เพจ : ดูรีวิวและสิ่งอำนวยความสะดวกของที่พักก่อนตัดสินใจ </a></li>
+                        <li><a href="https://www.agoda.com/th-th/kamari-cafe-resort-kohlarn/hotel/all/pattaya-th.html?countryId=106&finalPriceView=1&isShowMobileAppPrice=false&cid=1919571&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2025-02-14&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=THB&isFreeOccSearch=false&tag=3c5d815d-a417-4717-a783-2560673ea51b&los=1&searchrequestid=5be5ee15-0425-4b91-acd1-2ddf34d1c923&ds=HHHj1oGxDqnvMftd" target="_blank">เพจ : ดูรายละเอียดเพิ่มเติมและจองห้องพักได้ที่นี่ </a></li>
+                        <li><a href="https://th.trip.com/hotels/list?city=35996&cityName=Koh%20Larn&provinceId=10087&countryId=4&districtId=0&checkin=2025-02-05&checkout=2025-02-06&barCurr=THB&lat=12.926747&lon=100.7881698&searchType=LM&searchWord=Kamari%20Cafe&Resort%20Kohlarn=undefined&searchValue=131~0*131*12.926747~100.7881698~Kamari%20Cafe&Resort%20Kohlarn~0*1=undefined&searchCoordinate=BAIDU_0_0_0~GAODE_0_0_0~GOOGLE_12.926747_100.7881698_0~NORMAL_12.926747_100.7881698_0&crn=1&adult=2&children=0&searchBoxArg=t&ctm_ref=ix_sb_dl&travelPurpose=0&domestic=false&listFilters=17~5*17*5*2%2C80~0~1*80*0*2" target="_blank">ที่พักใกล้ๆ : เปรียบเทียบที่พักและเลือกที่พักที่ดีที่สุดสำหรับคุณ</a></li>
+                        <li><a href="https://www.google.com/maps/dir/%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2,+%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%B5%E0%B8%AE%E0%B8%B2%E0%B8%A2+-+%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99,+%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99/Kamari+Cafe%26Resort+Kohlarn+Bang+Lamung+District,+Chon+Buri/@12.924707,100.7918016,16z/data=!3m1!4b1!4m19!4m18!1m10!1m1!1s0x3102963e1f257af5:0x977e8d515f33a33a!2m2!1d100.8058747!2d12.9228548!3m4!1m2!1d100.7900356!2d12.9224745!3s0x3102983ccdf6c235:0x6172d3ff4944ce13!1m5!1m1!1s0x3102993b6b29ede5:0x53455bd02a9420f5!2m2!1d100.7881698!2d12.926747!3e9?entry=ttu&g_ep=EgoyMDI1MDIwMi4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D" target="_blank">Map : การเดินทางจากท่าเรือไปยังที่พัก</a></li>
+                    </ul>
+                </div>
+
+                <div class="resort-2 mt-4">
+                    <h4>3. ที่พักติดชายหาด</h4>
+                    <p class="mt-2"><span>Tiennara Koh Larn Resort : </span>
+                        ที่พักเพียงแห่งเดียวบนหาดเทียน ให้คุณสัมผัสบรรยากาศทะเลได้อย่างใกล้ชิด เพียงไม่กี่ก้าวจากหน้าห้องพักก็สามารถเดินลงทะเลได้เลย เหมาะสำหรับผู้ที่รักธรรมชาติและความสงบ</p>
+                    <img src="images/resort/03.jpg">
+                    <ul>
+                        <li><a href="https://www.facebook.com/tiennara.kohlarn/?locale=th_TH" target="_blank">เพจ : ดูรายละเอียดเพิ่มเติมและจองห้องพักได้ที่นี่ </a></li>
+                        <li><a href="https://th.trip.com/hotels/list?city=35996&cityName=Koh%20Larn&provinceId=10087&countryId=4&checkIn=2025-02-05&checkOut=2025-02-06&lat=12.9189281&lon=100.770212&districtId=0&barCurr=THB&searchType=LM&searchWord=Tiennara&searchValue=131~0*131*12.9189281~100.770212~Tiennara~0*1&searchCoordinate=BAIDU_0_0_0~GAODE_0_0_0~GOOGLE_12.9189281_100.770212_0~NORMAL_12.9189281_100.770212_0&crn=1&adult=2&children=0&searchBoxArg=t&ctm_ref=ix_sb_dl&travelPurpose=0&domestic=false&listFilters=17~5*17*5*2%2C80~0~1*80*0*2" target="_blank">ที่พักใกล้ๆ : เปรียบเทียบที่พักและเลือกที่พักที่ดีที่สุดสำหรับคุณ</a></li>
+                        <li><a href="https://www.google.com/maps/dir/%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2,+%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%B5%E0%B8%AE%E0%B8%B2%E0%B8%A2+-+%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99,+%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99/33,+Tiennara,+%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99,+Bang+Lamung+District,+Chon+Buri/@12.9176307,100.7767001,15z/data=!3m1!4b1!4m19!4m18!1m10!1m1!1s0x3102963e1f257af5:0x977e8d515f33a33a!2m2!1d100.8058747!2d12.9228548!3m4!1m2!1d100.7900356!2d12.9224745!3s0x3102983ccdf6c235:0x6172d3ff4944ce13!1m5!1m1!1s0x310295923dcbc043:0x47265601ac467686!2m2!1d100.770212!2d12.9189281!3e9?entry=ttu&g_ep=EgoyMDI1MDIwMi4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D" target="_blank">Map : การเดินทางจากท่าเรือไปยังที่พัก</a></li>
+                    </ul>
+                </div>
+
+                <div class="resort-2 mt-4">
+                    <h4>4. พูลวิลล่า</h4>
+                    <p class="mt-2"><span>วิราวัน พูล รีสอร์ท เกาะล้าน : </span>
+                        พูลวิลล่าหรูที่มอบความเป็นส่วนตัวสูงสุด เหมาะสำหรับการพักผ่อนกับครอบครัวหรือคู่รัก มีสระว่ายน้ำส่วนตัวและบรรยากาศเงียบสงบ ให้คุณดื่มด่ำกับความหรูหราท่ามกลางธรรมชาติ</p>
+                    <img src="images/resort/04.jpg">
+                    <ul>
+                        <li><a href="https://www.facebook.com/virawanpool/?locale=th_TH" target="_blank">เพจ : ดูรายละเอียดเพิ่มเติมและจองห้องพักได้ที่นี่ </a></li>
+                        <li><a href="https://www.agoda.com/th-th/h16919195/hotel/pattaya-th.html?countryId=106&finalPriceView=1&isShowMobileAppPrice=false&cid=1919460&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2025-02-14&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=THB&isFreeOccSearch=false&tag=6d3c2f92-a707-4bc9-8b31-11b36030046b&los=1&searchrequestid=c6c2e8a2-ffe8-48bd-b26b-1cde4a09d722&ds=YiRyFukV2Ey%2FyuBi" target="_blank">Agoda : ดูรีวิวและสิ่งอำนวยความสะดวกของที่พักก่อนตัดสินใจ </a></li>
+                        <li><a href="https://th.trip.com/hotels/list?city=35996&cityName=%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99&provinceId=10087&countryId=4&districtId=0&checkin=2025%2F02%2F05&checkout=2025%2F02%2F06&barCurr=THB&lat=12.913929&lon=100.783154&searchType=H&searchWord=Virawan%20pool%20kohlarn%20%E0%B8%A7%E0%B8%B4%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B8%B1%E0%B8%99%20%E0%B8%9E%E0%B8%A5%E0%B8%B9%20%E0%B8%A3%E0%B8%B5%E0%B8%AA%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%95%20%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99&searchValue=31~100657709*31*100657709*1&searchCoordinate=BAIDU_-1_-1_0~GAODE_-1_-1_0~GOOGLE_12.913929_100.783154_0~NORMAL_12.913929_100.783154_0&crn=1&adult=2&children=0&searchBoxArg=t&travelPurpose=0&ctm_ref=ix_sb_dl&domestic=false&listFilters=17~5*17*5*2%2C80~0~1*80*0*2&locale=th-TH&curr=THB" target="_blank">ที่พักใกล้ๆ : เปรียบเทียบที่พักและเลือกที่พักที่ดีที่สุดสำหรับคุณ</a></li>
+                        <li><a href="https://www.google.com/maps/place/Virawan+Pool+Villa+Resort+Kohlarn/@12.9139312,100.7828497,21z/data=!4m26!1m16!4m15!1m6!1m2!1s0x3102963e1f257af5:0x977e8d515f33a33a!2z4Lie4Lix4LiX4Lii4LiyLCDguJfguYjguLLguYDguKPguLfguK3guYHguKvguKXguKHguJrguLLguKXguLXguK7guLLguKIgLSDguYDguIHguLLguLDguKXguYnguLLguJksIOC4l-C5iOC4suC5gOC4o-C4t-C4reC4q-C4meC5ieC4suC4muC5ieC4suC4mQ!2m2!1d100.8058747!2d12.9228548!1m6!1m2!1s0x31029961a2f2b3f5:0xad419e72010dadf5!2zVmlyYXdhbiBQb29sIFZpbGxhIFJlc29ydCBLb2hsYXJuIFVubmFtZWQgUm9hZCwg4Lit4Liz4LmA4Lig4Lit4Lia4Liy4LiH4Lil4Liw4Lih4Li44LiHIOC4iuC4peC4muC4uOC4o-C4tSAyMDE1MA!2m2!1d100.7831475!2d12.9139311!3e9!3m8!1s0x31029961a2f2b3f5:0xad419e72010dadf5!5m2!4m1!1i2!8m2!3d12.9139311!4d100.7831475!16s%2Fg%2F11h3_26rjr?entry=ttu&g_ep=EgoyMDI1MDIwMi4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D" target="_blank">Map : การเดินทางจากท่าเรือไปยังที่พัก</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="restaurant" id="restaurant">
+                <p class="nav-text">nav-text</p>
+                <h3>ร้านอารหารบนเกาะล้าน</h3>
+                <p>ที่พักบนเกาะล้านมีให้เลือกหลากหลายสไตล์ ไม่ว่าจะเป็นรีสอร์ตสุดหรูติดทะเล บังกะโลบรรยากาศอบอุ่น หรือโฮมสเตย์ราคาประหยัด 
+                    นักท่องเที่ยวสามารถเลือกที่พักตามความต้องการ ไม่ว่าจะเป็นที่พักสำหรับการพักผ่อนแบบส่วนตัว ที่พักใกล้ชายหาดสำหรับชมวิวพระอาทิตย์ตก 
+                    หรือที่พักในตัวหมู่บ้านที่สะดวกต่อการเดินทางไปยังร้านอาหารและท่าเรือ</p>
+                <div class="restaurant-1 mt-4">
+                    <h4>1. ร้านอาหารทะเลสด : <a href="https://www.facebook.com/p/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A2-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99-100057480257039/" target="_blank">ป้าสร้อย ซีฟู้ด</a></h4>
+                    <p class="mt-2">หากพูดถึงอาหารทะเลสดบนเกาะล้าน "ป้าสร้อย ซีฟู้ด" เป็นหนึ่งในร้านยอดนิยมที่ต้องลอง! ร้านนี้ขึ้นชื่อเรื่องความสดของวัตถุดิบ ไม่ว่าจะเป็นกุ้ง หอย ปู ปลา ที่จับขึ้นจากทะเลใหม่ๆ ทุกวัน 
+                        รสชาติจัดจ้านตามสไตล์อาหารไทยแท้ เสิร์ฟพร้อมน้ำจิ้มซีฟู้ดสูตรเด็ด บรรยากาศร้านติดทะเล ลมพัดเย็นสบาย เหมาะสำหรับคนที่อยากลิ้มรสซีฟู้ดแท้ๆ</p>
+                    <img src="images/restaurant/01.jpg">
+                </div>
+
+                <div class="restaurant-2 mt-4">
+                    <h4>2. คาเฟ่บรรยากาศดี : <a href="https://www.facebook.com/maharakcafe/?locale=th_TH" target="_blank">Maharak Café</a></h4>
+                    <p class="mt-2">เป็นคาเฟ่สุดชิลล์ริมทะเลที่ได้รับความนิยมจากนักท่องเที่ยว ด้วยวิวทะเลที่สวยงาม และบรรยากาศสุดโรแมนติก เหมาะสำหรับการนั่งพักผ่อนพร้อมจิบกาแฟหอมๆ 
+                        เมนูที่แนะนำคือเครื่องดื่มแนวสดชื่น เช่น มะนาวโซดา และของหวานโฮมเมดที่ตกแต่งอย่างสวยงาม มุมถ่ายรูปในร้านก็น่ารัก มีทั้งโซนนั่งชิลล์รับลมทะเลและมุมฮิปๆ ให้เลือกนั่ง</p>
+                        <img src="images/restaurant/02.jpg">
+                </div>
+
+                <div class="restaurant-2 mt-4">
+                    <h4>3. ร้านอาหารติดชายหาด : <a href="https://www.facebook.com/p/%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%89%E0%B8%A5%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%A1seafood-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99-100036214813508/" target="_blank">ครัวเฉลียงลม</a></h4>
+                    <p class="mt-2">เป็นร้านอาหารริมทะเลที่มาพร้อมกับวิวชายหาดสุดตระการตา จุดเด่นของร้านคือที่นั่งรับลมทะเล ฟังเสียงคลื่น พร้อมดื่มด่ำกับอาหารอร่อยๆ มีทั้งเมนูซีฟู้ดสดใหม่ และเมนูนานาชาติที่รสชาติเข้ากันได้ดี 
+                        เช่น สเต๊กปลาแซลมอน และสปาเก็ตตี้ขี้เมาทะเล ที่นี่เหมาะสำหรับคนที่อยากใช้เวลาพักผ่อนริมทะเลไปพร้อมกับอาหารอร่อยและมุมถ่ายรูปสวยๆ</p>
+                        <img src="images/restaurant/03.jpg">
+                </div>
+
+                <div class="restaurant-2 mt-4">
+                    <h4>4. ร้านนั่งดื่มชิลล์บนเกาะล้าน : <a href="https://www.facebook.com/p/One-More-Bar-Koh-Lan%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%9A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99-100063675513351/" target="_blank">One-More Koh Larn</a></h4>
+                    <p class="mt-2"> เป็นร้านนั่งดื่มยอดฮิตที่เหมาะสำหรับสายปาร์ตี้และคนที่อยากนั่งชิลล์ในบรรยากาศสนุกๆ ร้านนี้มีเครื่องดื่มหลากหลาย ไม่ว่าจะเป็นเบียร์เย็นๆ ค็อกเทลสูตรพิเศษ และเหล้าหลากชนิดให้เลือก 
+                        เมนูอาหารก็มีให้บริการทั้งกับแกล้มและอาหารจานหลักบรรยากาศของร้านเป็นแนวชิลล์ๆ แต่ก็สามารถสนุกไปกับดนตรีสดและดีเจที่มาสร้างสีสันในช่วงค่ำ 
+                        ใครที่กำลังมองหาสถานที่นั่งดื่มแบบไม่เงียบเหงา ได้เจอเพื่อนใหม่ๆ และสนุกไปกับบรรยากาศแสงสีของเกาะล้าน One-More Koh Larn เป็นตัวเลือกที่ไม่ควรพลาด!</p>
+                        <img src="images/restaurant/04.jpg">
+                </div>
+
+            </div>
+
+
+
+            <div class="travel" id="travel">
+                <p class="nav-text mt-4">nav-text</p>
+                <h3>การเดินทาง</h3>
+                <p>การเดินทางจากแหลมบาลีฮายในเมืองพัทยา จังหวัดชลบุรี ซึ่งเป็นจุดออกเรือหลักไปยังเกาะล้าน สามารถทำได้จากท่าเรือพัทยาใต้ ที่ตั้งอยู่ใกล้กับบริเวณแหลมบาลีฮาย โดยท่าเรือพัทยาใต้จะเป็นจุดสำคัญที่เชื่อมต่อการเดินทางไปยังเกาะล้าน</p>
+                <div class="row icon-kohlarn-th">
+                    <div class="card mt-1 p-1 col-xl-3 col-md-4 col-sm-5 col-5 d-flex flex-column align-items-center">
+                        <div class="mb-1"><img src="images/icon/travel/ship.png" class="icon img-fluid"></div>
+                        <h5>เรือโดยสาร</h5> 
+                        <p>30 บาท / คน</p>
+                        <div class="time-travel"><p>เดินทางโดยประมาณ 25-30 นาที</p></div>
+                    </div>
+
+                    <div class="card mt-1 p-1 col-xl-3 col-md-4 col-sm-5 col-5 d-flex flex-column align-items-center">
+                        <div class="mb-1"><img src="images/icon/travel/boat.png" class="icon img-fluid"></div>
+                        <h5>สปีดโบ๊ท</h5> 
+                        <p>200-300 บาท / คน</p>
+                        <div class="time-travel"><p>เดินทางโดยประมาณ 20 นาที</p></div>
+                    </div>
+                </div>
+
+                <p class="mt-3">เมื่อเดินทางมาถึงเกาะล้านแล้ว คุณจะพบว่ามีหลายวิธีในการเดินทางภายในเกาะเพื่อความสะดวกสบายและสนุกสนาน คุณสามารถเลือกใช้บริการต่างๆ ตามความสะดวก เช่น การเช่ามอเตอร์ไซค์หรือจักรยาน เพื่อการเดินทางที่รวดเร็วและสะดวก หรือเลือกใช้บริการรถสองแถวที่วิ่งตามเส้นทางต่างๆ รอบเกาะ ซึ่งเหมาะสำหรับกลุ่มที่ต้องการความสะดวกสบายในการเดินทางและอยากประหยัดค่าใช้จ่าย นอกจากนี้ยังมีบริการรถรับส่งจากท่าเรือไปยังหาดต่างๆ ให้เลือกอีกด้วย การเดินทางบนเกาะล้านจึงเป็นเรื่องง่ายและสะดวกตามความต้องการของแต่ละคน</p>
+                <div class="row icon-kohlarn-th">
+                    <div class="card mt-1 p-1 col-xl-3 col-md-3 col-sm-4 col-3 d-flex flex-column align-items-center text-center">
+                        <div class="mb-2"><img src="images/icon/travel_kon/motorcycle.png" class="icon img-fluid"></div>
+                        <div class="text-h5">มอเตอร์ไซต์เช่า</div>
+                        <p>300-500 บาท / วัน</p>
+                    </div>
+
+                    <div class="card mt-1 p-1 col-xl-3 col-md-3 col-sm-4 col-4 d-flex flex-column align-items-center text-center">
+                        <div class="mb-2"><img src="images/icon/travel_kon/wine_motorcycle.png" class="icon img-fluid"></div>
+                        <div class="text-h5">มอเตอร์ไซต์รับจ้าง</div>
+                        <p>50-100 / เที่ยว</p>
+                    </div>
+
+                    <div class="card mt-1 p-1 col-xl-3 col-md-3 col-sm-3 col-3  d-flex flex-column align-items-center text-center">
+                        <div class="mb-2"><img src="images/icon/travel_kon/minibus.png" class="icon img-fluid"></div>
+                        <div class="text-h5">รถสองแถว</div>
+                        <p>20 บาท / คน</p>
+                    </div>
+                </div>
+
+                <p class="mt-3">การเดินทางบนเกาะล้านมีตัวเลือกหลากหลาย ทั้งการเช่ามอเตอร์ไซค์ การใช้มอเตอร์ไซค์รับจ้าง รถสองแถว เลือกวิธีการเดินทางที่เหมาะสมกับความต้องการและงบประมาณของคุณ เพื่อให้การเที่ยวเกาะล้านเป็นประสบการณ์ที่สนุกและน่าจดจำ!</p>
+            </div>
+
+            <div class="beach" id="beach">
+                <p class="nav-text">nav-text</p>
+                <h3>หาดบนเกาะล้าน</h3>
+                <p>เกาะล้านเต็มไปด้วยชายหาดที่เหมาะสำหรับการพักผ่อนและทำกิจกรรมต่างๆ มาดูกันว่าหาดที่น่าสนใจบนเกาะล้านมีอะไรบ้าง!</p>
+
+                <div class="tawaen-beach mt-4">
+                        <h4>1. หาดตาแหวน</h4>
+                        <img class="img-beach mt-2" src="images/images/beach/Tawaen_Beach-2.jpg" alt="หาดตาแหวน">
+                    <p class="mt-3">หาดยอดนิยมที่สุดบนเกาะล้าน เพราะอยู่ใกล้ท่าเรือและมีบรรยากาศคึกคัก น้ำทะเลสีฟ้าใสตัดกับหาดทรายขาวสะอาด เหมาะสำหรับผู้ที่ชื่นชอบกิจกรรมทางน้ำ เช่น เจ็ตสกี บานาน่าโบ๊ท หรือดำน้ำดูปะการัง ใครที่ชอบบรรยากาศครึกครื้นต้องไม่พลาดหาดนี้!</p>
+                </div>
+
+                <div class="sangwan-beach mt-4">
+                        <h4>2. หาดสังวาลย์</h4>
+                        <img class="img-beach mt-2" src="images/images/beach/Sangwan_Beach.jpg" alt="หาดสังวาลย์">
+                    <p class="mt-3">หาดเล็กๆที่อยู่ไม่ไกลจากหาดตาแหวน แต่เงียบสงบและเป็นส่วนตัวกว่าไฮไลต์ของที่นี่คือสะพานไม้ที่ทอดยาวลงสู่ทะเล สถานที่ถ่ายรูปสุดโรแมนติกที่หลายคนหลงรักเหมาะสำหรับคู่รักหรือผู้ที่มองหามุมพักผ่อนแบบเงียบสงบ</p>
+                </div>
+
+                <div class="thonglang-beach mt-4">
+                    <h4>3. หาดทองหลาง</h4>
+                    <img class="img-beach mt-2" src="images/images/beach/ThongLang_Beach.jpg" alt="หาดทองหลาง">
+                    <p class="mt-3">สำหรับคนรักการดำน้ำ หาดทองหลางคือสวรรค์ เพราะน้ำทะเลใสมากและเต็มไปด้วยปะการังและปลาสีสันสวยงาม เหมาะกับการดำน้ำชมธรรมชาติใต้ทะเล ใครที่อยากสัมผัสโลกใต้ทะเลแบบใกล้ชิด ไม่ควรพลาด!</p>
+                </div>
+
+                <div class="thain-beach mt-4">
+                    <h4>4. หาดเทียน</h4>
+                    <img class="img-beach mt-2" src="images/images/beach/Thain_Beach.jpg" alt="หาดเทียน">
+                    <p class="mt-3">หากคุณกำลังมองหาหาดที่เงียบสงบและเต็มไปด้วยธรรมชาติ หาดเทียนจะตอบโจทย์คุณได้อย่างดี ด้วยความยาวของหาดและต้นไม้ที่ร่มรื่น ให้ความรู้สึกเหมือนมีหาดส่วนตัว เหมาะสำหรับการเดินเล่นหรือนั่งอ่านหนังสือริมหาด</p>
+                </div>
+
+                <div class="nuan-beach mt-4">
+                    <h4>5. หาดนวล</h4>
+                    <img class="img-beach mt-2" src="images/images/beach/Nuan_Beach.jpg" alt="หาดนวล">
+                    <p class="mt-3">หาดที่ยังคงความเป็นธรรมชาติและมีผู้คนไม่พลุกพล่าน เหมาะสำหรับผู้ที่ต้องการความสงบและหลีกหนีความวุ่นวาย น้ำทะเลบริเวณนี้ใสสะอาดและบรรยากาศเงียบสงบ เป็นที่นิยมของผู้ที่รักความเป็นส่วนตัว</p>
+                </div>
+
+                <div class="samae-beach mt-4">
+                    <h4>6. หาดแสม</h4>  
+                    <img class="img-beach mt-2" src="images/images/beach/Samae_Beach.jpg" alt="หาดแสม">
+                    <p class="mt-3">หาดที่มีบรรยากาศร่มรื่นและเป็นธรรมชาติ ด้วยพื้นที่กว้างขวางและต้นไม้มากมาย น้ำทะเลสีฟ้าใสเหมาะสำหรับการว่ายน้ำหรือพายเรือคายัค หากคุณต้องการหลีกหนีแสงแดดแรงๆ หาดแสมคือตัวเลือกที่ดี!</p>
+                </div>
+            </div>
+
+            <div class="activity" id="activity">
+                <p class="nav-text">nav-text</p>
+                <h3>กิจกรรมบนเกาะล้าน</h3>
+                <p>เกาะล้านไม่เพียงแค่มีชายหาดที่สวยงามและน้ำทะเลใสสะอาดเท่านั้น แต่ยังมีกิจกรรมหลากหลายที่รอให้คุณได้สัมผัส ไม่ว่าคุณจะเป็นสายผจญภัยหรือสายชิลล์ เกาะล้านก็มีกิจกรรมที่เหมาะสำหรับทุกคน มาดูกันว่ากิจกรรมยอดนิยมบนเกาะล้านมีอะไรบ้าง!</p>  
+
+                <div class="row icon-kohlarn-button">
+                    <div class="icon-kohlarn-th">
+                        <div class="card mt-1 p-1 col-xl-3 col-md-3 col-sm-3 col-3 d-flex text-center align-items-center">
+                            <a href="#sunset">
+                                <div class="mb-3"><img src="images/icon/activity/sunset.png" class="icon img-fluid"></div>
+                                <h5 class="">จุดชมวิว</h5>
+                                <p>ฟรี</p>
+                            </a>
+                        </div>
+
+                        <div class="card mt-1 p-1 col-xl-3 col-md-3 col-sm-3 col-3 d-flex text-center align-items-center">
+                            <a href="#fishing">
+                                <div class="mb-3"><img src="images/icon/activity/fishing.png" class="icon img-fluid"></div>
+                                <h5>ตกหมึก</h5>
+                                <p>400 บาท / คน</p>
+                            </a>
+                        </div>
+
+                        <div class="card mt-1 p-1 col-xl-3 col-md-3 col-sm-3 col-3 d-flex text-center align-items-center">
+                            <a href="#jet-ski">
+                                <div class="mb-3"><img src="images/icon/activity/jet-ski.png" class="icon img-fluid"></div>
+                                <h5>เจ็ตสกี</h5>
+                                <p>700-1,500 บาท</p>
+                            </a>
+                        </div>
+
+                        <div class="card mt-1 p-1 col-xl-3 col-md-3 col-sm-3 col-3 d-flex text-center align-items-center">
+                            <a href="#water-park">
+                                <div class="mb-3"><img src="images/icon/activity/water-park.png" class="icon img-fluid"></div>
+                                <h5>สวนน้ำทะเล</h5>
+                                <p>200 บาท / คน</p>
+                            </a>
+                        </div>
+
+                        <div class="card mt-1 p-1 col-xl-3 col-md-3 col-sm-3 col-3 d-flex text-center align-items-center">
+                            <a href="#diver">
+                                <div class="mb-3"><img src="images/icon/activity/diver.png" class="icon img-fluid"></div>
+                                <h5>ดำน้ำ</h5>
+                                <p>200-300 บาท / คน</p>
+                            </a>
+                        </div>
+
+                        <div class="card mt-1 p-1 col-xl-3 col-md-3 col-sm-3 col-3 d-flex text-center align-items-center">
+                            <a href="#banana-boat">
+                                <div class="mb-3"><img src="images/icon/activity/banana-boat.png" class="icon img-fluid"></div>
+                                <h5>บานาน่าโบ๊ท</h5>
+                                <p>200-300 บาท / คน</p>
+                            </a>
+                        </div>
+
+                </div>
+
+                <div class="text-activity">
+                    <div class="sunset" id="sunset">
+                        <p class="nav-text">nav-text</p>
+                        <h4>1. จุดชมวิว</h4>
+                        <p>บรรยากาศของพระอาทิตย์ตกบนเกาะล้านเป็นสิ่งที่คุณไม่ควรพลาด จุดชมพระอาทิตย์ตกที่สวยที่สุด ได้แก่ หาดแสม และจุดชมวิวเขาหน้ายักษ์</p>
+                        <div class="sunset-1">
+                            <p class="title-sunset">จุดชมวิวหาดแสม หรือ จุดชมวิวเขานม</p>
+                            <img src="images/images/activity/sunset-1.jpg" class="img-activity" alt="จุดชมวิวหาดแสม">
+                            <p class="mt-2">เป็นสถานที่ที่นักท่องเที่ยวสามารถชมวิวทิวทัศน์ของหาดแสมและบริเวณโดยรอบได้อย่างงดงาม จากจุดนี้ คุณจะได้เห็นน้ำทะเลสีฟ้าใส หาดทรายขาว และทิวทัศน์ของกังหันลมที่ตั้งอยู่บนเนินเขา ซึ่งเป็นสัญลักษณ์ที่โดดเด่นของพื้นที่นี้</p>
+                        </div>
+
+                        <div class="sunset-2">
+                            <p class="title-sunset">จุดชมวิวเขาหน้ายักษ์</p>
+                            <img src="images/images/activity/sunset-2.jpg" class="img-activity" alt="จุดชมวิวเขาหน้ายักษ์">
+                            <p class="mt-2">เป็นสถานที่ที่นักท่องเที่ยวสามารถชมวิวทะเลและพระอาทิตย์ตกดินได้อย่างงดงาม การเดินทางไปยังผาหน้ายักษ์สามารถทำได้โดยใช้เส้นทางเดียวกับทางไปหาดนวล เมื่อขับรถไปทางหาดนวล ให้สังเกตด้านขวามือ จะมีทางเข้าที่สามารถขับเข้าไปจนสุดและจอดรถได้ จากนั้นเดินเท้าต่อไปยังจุดชมวิว</p>
+                        </div>
+                    </div>
+
+                    <div class="fishing mt-4" id="fishing">
+                        <p class="nav-text">nav-text</p>
+                        <h4>2. ตกหมึก</h4>
+                        <p class="mt-2">กิจกรรมตกหมึกเป็นที่นิยมสำหรับนักท่องเที่ยวที่มาเยือนเกาะล้าน โดยเฉพาะในช่วงเย็นจนถึงค่ำ เมื่อหมึกออกหากินและแสงไฟจากเรือช่วยดึงดูดหมึกขึ้นมาใกล้ผิวน้ำ</p>
+                            <p class="text-fishing">- เวลาให้บริการ: ช่วงเย็นตั้งแต่ประมาณ 18:00 น. ถึง 22:00 น.</p>
+                            <p class="text-fishing">- ราคา : เริ่มต้นที่ 400 บาทต่อคน (รวมอุปกรณ์และบริการ)</p>
+                        <img src="images/images/activity/fishing.jpg" class="img-activity mt-2" alt="ตกหมึกเกาะล้าน">
+                    </div>
+
+                    <div class="jek-ski mt-4" id="jet-ski">
+                        <p class="nav-text">nav-text</p>
+                        <h4>3. ขับเจ็ตสกี</h4>
+                        <p class="mt-2">นักท่องเที่ยวสามารถสนุกสนานกับการขับเจ็ตสกีท่ามกลางวิวทะเลสวยๆ รอบเกาะ จุดที่เหมาะสำหรับขับเจ็ตสกี ได้แก่ หาดตาแหวนและหาดนวล ซึ่งน้ำทะเลใสและมีคลื่นที่พอเหมาะกับการขับเจ็ตสกี</p>
+                        <img src="images/images/activity/jaksaki.jpg" class="img-activity mt-2" alt="ขับเจ็ตสกีเกาะล้าน">
+                    </div>
+
+                    <div class="banana-boat mt-4" id="banana-boat">
+                        <p class="nav-text">nav-text</p>
+                        <h4>4. บานาน่าโบ๊ท</h4>
+                        <p class="mt-2">เหมาะสำหรับทั้งกลุ่มเพื่อนและครอบครัว โดยผู้เล่นจะนั่งบนบานาน่าโบ๊ท ซึ่งเป็นเรือยางขนาดใหญ่ที่ลากด้วยเรือเร็วกลางทะเล กระแสคลื่นและการเร่งความเร็วของเรือจะทำให้บานาน่าโบ๊ทพลิกคว่ำหรือหมุนไปมาเพิ่มความสนุกและท้าทายให้กับผู้เล่น</p>
+                        <img src="images/images/activity/banana-boat.jpg" class="img-activity mt-2" alt="บานาน่าโบ๊ทเกาะล้าน">
+                    </div>
+
+                    <div class="diver mt-4" id="diver">
+                        <p class="nav-text">nav-text</p>
+                        <h4>5. ดำน้ำ</h4>
+                        <p class="mt-2">มีน้ำทะเลที่ใสและระบบนิเวศทางทะเลที่ยังคงความสมบูรณ์ มีจุดดำน้ำหลากหลายที่สามารถชมปะการังและสัตว์น้ำต่างๆ ได้อย่างใกล้ชิด จุดดำน้ำที่เป็นที่นิยมเช่น ทะเลแหวก หาดตาแหวน และหาดนวล ซึ่งเหมาะสำหรับนักดำน้ำทั้งมือใหม่และมือโปร</p>
+                        <img src="images/images/activity/dive.jpg" class="img-activity mt-2" alt="ดำน้ำเกาะล้าน">
+                    </div>
+
+                    <div class="water-park mt-4" id="water-park">
+                        <p class="nav-text">nav-text</p>
+                        <h4>6. สวนน้ำกลางทะเล</h4>
+                        <p class="mt-2">กิจกรรมที่สนุกและน่าตื่นเต้นสำหรับผู้ที่ชื่นชอบการผจญภัยในน้ำ โดยจะมีการจัดตั้งแพลอยน้ำกลางทะเลที่มีเครื่องเล่นน้ำต่างๆ เช่น สไลเดอร์ ลานกระโดด และสระน้ำ ที่สามารถเล่นได้ทั้งเด็กและผู้ใหญ่ สวนน้ำแบบนี้มักตั้งอยู่ในบริเวณหาดต่างๆ ของเกาะล้าน เช่น หาดตาแหวน หาดนวล หรือหาดทองหลาง</p>
+                        <img src="images/images/activity/water-park.jpg" class="img-activity mt-2" alt="สวนน้ำกลางทะเลเกาะล้าน">
+                    </div>
+                </div>
+            </div>
+
+            <div class="article mt-5" id="article">
+                <h3>บทความ</h3>
+            
+                <div class="row">
+                    <div class="mt-3 col-xl-4 col-md-4 col-sm-4 col-6">
+                        <a href="https://webapp.cm.in.th/673190902/u67319090017/Portfolio/">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="images/article/me.jpg" class="img-fluid">
+                            </div>
+                            <p class="p-2">PORTFOLIO : นายก้องภพ ลุงแดง</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="follow-me mt-4" id="follow-me">
+                <div class="line-text-follo-me"></div>
+                <div class="text-center"><h3>Follow Us</h3></div>
+                <ul class="d-flex justify-content-center align-items-center p-0">
+                    <li class="px-2"><a href="https://www.facebook.com/kongpop.l?locale=th_TH" target="_blank"><i class="bi bi-facebook"></i></a></li>
+                    <li class="px-2"><a href="https://www.instagram.com/gxttkp/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                    <li class="px-2"><a href="https://line.me/ti/p/s-kbdJ2mig" target="_blank"><i class="bi bi-line"></i></a></li>
+                    <li class="px-2"><a href="https://webapp.cm.in.th/673190902/u67319090017/Portfolio/" target="_blank"><i class="bi bi-globe"></i></a></li>
+                </ul>
+
+                <p class="text-center">Copyright © Kongpop lungdang</p>
+            </div>
+        </div>
+        <!-- Optional JavaScript; choose one of the two! -->
+        
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        -->
+
+        <script src="script.js"></script>
+    </body>
+</html>

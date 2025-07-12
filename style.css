@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800;900&family=Oswald:wght@200..700&family=Russo+One&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap');
+body {
+    font-family: 'Russo One', sans-serif;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+.nav-bar{
+    color: #393E46;
+    background-color: #FFF;
+    width: 100%;
+    box-shadow: 0 0 0.8vh rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 20px 20px; /*บนซ้าย บนขวา ล่างขวา ล่างซ้าย*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100; /* เพื่อให้ลอยอยู่บนสุด */ 
+
+}
+.container {
+  margin-top: 60px; /* มากกว่าความสูง nav-bar นิดหน่อย */
+}
+.title-main {
+    font-size: clamp(2em, 2vw + 1em, 3em);
+    font-weight: bold;
+    margin: 0;
+}
+
+.frame-work {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #FFFF;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-content {
+    color: #393E46;
+    display: flex;
+    align-items: center;
+}
+.imgShowMywork{
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease; /* ทำให้การขยายลื่นไหล */
+    overflow: hidden; /* ป้องกันภาพล้น */
+}
+a {
+    text-decoration: none;
+}
+.text-warpper {
+    flex: 1;          /* ใช้พื้นที่ที่เหลือใน flexbox */
+    min-width: 0;     /* สำคัญมาก: อนุญาตให้บีบ width ได้ ถ้าไม่ใส่ ellipsis จะไม่ทำงาน */
+}
+
+.title-en {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;         /* ไม่ให้ขึ้นบรรทัดใหม่ */
+    overflow: hidden;            /* ซ่อนส่วนที่ล้น */
+    text-overflow: ellipsis;     /* แสดง ... */
+    display: block;              /* ต้องมีเพื่อให้ ellipsis ทำงานใน p */
+    max-width: 100%;             /* ไม่ให้เกินพื้นที่กล่อง */
+}
+.title-th {
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+    opacity: 90%;
+    margin: -20px 0 0 0;
+    white-space: nowrap;         /* ไม่ให้ขึ้นบรรทัดใหม่ */
+    overflow: hidden;            /* ซ่อนส่วนที่ล้น */
+    text-overflow: ellipsis;     /* แสดง ... */
+    display: block;              /* ต้องมีเพื่อให้ ellipsis ทำงานใน p */
+    max-width: 100%;             /* ไม่ให้เกินพื้นที่กล่อง */
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-content:hover {
+    color: #6D9886;
+}
+.imgShowMywork:hover {
+  transform: scale(1.1); /* ขยาย 10% */
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin-top: 70px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        margin-top: 80px;
+    }
+}
+@media (min-width: 1500px) {
+    .container {
+        margin-top: 90px;
+    }
+}

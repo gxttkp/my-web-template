@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="showform.php" method="POST">
+        <h3>ข้อมูลนักศึกษา : </h3> <dd>
+        
+        ชื่อ <input type='radio' name='nounth' value='นาย'>นาย
+        <input type='radio' name='nounth' value='นาง'>นาง
+        <input type='radio' name='nounth' value='นางสาว'>นางสาว
+        <input type='text'  name='nameth' placeholder='(ชื่อภาษาไทย)'> &nbsp;
+        นามสกุล <input type='text'  name='surnameth' placeholder='(นามสกุลภาษาไทย)'><br></br>
+
+        Name <input type='radio' name='nouneng' value='Mr.'>Mr.
+        <input type='radio' name='nouneng' value='Miss'>Miss
+        <input type='text'  name='nameeng' placeholder='(ชื่อภาษาอังกฤษ)'> &nbsp;
+        Surname <input type='text'  name='surnameeng' placeholder='(นามสกุลภาษาอังกฤษ)'><br></br>
+
+        เพศ <input type='radio' name='gender' value='ชาย'>ชาย
+        <input type='radio' name='gender' value='หญิง'>หญิง &nbsp;
+        วันเกิด <input type='date' name='datebirth'> &nbsp;
+        อายุ <input type='text' name='age' > ปี &nbsp;
+        เลขบัตรประจำตัวประชาชน <input type='text' name='ptt' placeholder='เลข 13 หลัก'><br></br>
+
+        สถานที่ออกบัตร <input type='text' name='locationbaid' id='locationbaid'> &nbsp;
+        วันหมดอายุ <input type='date' name='dateplus'> &nbsp;
+        สถานที่เกิด อำเภอ <input type='text' name='ampul' > &nbsp;
+        จังหวัด <input type='text' name='county' ><br></br>
+
+        เชื้อชาติ <input type='text' name='nation' > &nbsp;
+        สัญชาติ <input type='text' name='nationplus' > &nbsp;
+        ศาสนา <input type='text' name='religion' > </dd> <br></br>
+
+        <b>สถานภาพ : </b><br></br> <dd>
+        
+        <input type='radio' name='status' value='โสด'>โสด &nbsp;
+        <input type='radio' name='status' value='สมรส'>สมรส &nbsp;
+        <input type='radio' name='status' value='อย่าร้าง'>อย่าร้าง  &nbsp;
+        <input type='radio' name='status' value='สถานภาพอื่น'>อื่นๆ <input type='text' name='status'>&nbsp;
+        &nbsp; จำนวนบุตร <input type='text' name='numberson' > </dd> <br></br>
+
+        <b>ความพิการ : </b> <br></br> <dd>
+
+        <input type='radio' name='disability' valus='ไม่มีมีความพิการ'>ไม่มี &nbsp;
+        <input type='radio' name='disability' valus='มีความพิการ'>มี <input type='' name='namedisability'>&nbsp;
+        &nbsp; ความต้องการบริการพิเศษ คือ <input type='text' name='specialneed' > <br></br>
+
+        ขณะศึกษาพักอยู่กับ : <br></br>
+        
+        <input type='radio' name='live' valus='บิดา/มารดา'> บิดา/มารดา &nbsp;
+        <input type='radio' name='live' valus='ญาติ'> ญาติ &nbsp;
+        <input type='radio' name='live' valus='บ้านตัวเอง'> บ้านตัวเอง &nbsp;
+        <input type='radio' name='live' valus='หอพักมหาวิทยาลัย'> หอพักมหาวิทยาลัย 
+        <input type='radio' name='live' valus='บ้านเช่า'>บ้านเช่า
+        <input type='radio' name='live' valus='อาศัยอื่น'>อื่นๆ <input type='text' name='live'> </dd><br></br>
+
+        <b>ที่อยู่ปัจจุบัน </b>(ติดต่อได้สะดวก) <b>:</b> <br></br><dd>
+
+        เลขที่ <input type='text' name='numhome' > &nbsp;
+        หมู่ <input type='text' name='moban' > &nbsp;
+        ตรอก/ซอย <input type='text' name='soi' > &nbsp;
+        ถนน <input type='text' name='street' > &nbsp;
+        แขวง/ตำบล <input type='text' name='tubbonhome' >  <br></br>
+ 
+        เขต/อำเภอ <input type='text' name='ampulhome' > &nbsp;
+        จังหวัด <input type='text' name='countyhome' > &nbsp;
+        รหัสไปรษณีย์ <input type='text' name='idhome' > <br></br>
+
+        โทรศัพท์(บ้าน) <input type='text' name='telhome' > &nbsp;
+        โทรศัพท์(ส่วนตัว) <input type='text' name='telyou' > &nbsp;
+        e-mail <input type='text' name='email' > </dd><br></br>
+
+        <b>ที่อยู่ตามทะเบียนบ้าน : </b> <dd><br>
+
+        เลขที่ <input type='text' name='numaddress' > &nbsp;
+        หมูที่ <input type='text' name='moaddress' > &nbsp;
+        ตรอก/ซอย <input type='text' name='soiaddress' > &nbsp;
+        ถนน <input type='text' name='streetaddress' > <br></br>
+
+        แขวง/ตำบล <input type='text' name='tobbonaddress' > &nbsp;
+        เขต/อำเภอ <input type='text' name='ampuladdress' > &nbsp;
+        จังหวัด <input type='text' name='countyaddress' > <br></br>
+
+        รหัสไปรษณีย์ <input type='text' name='idaddress' > &nbsp;
+        โทรศัพท์ <input type='text' name='teladdress' > &nbsp;
+        เลขรหัสประจำบ้าน <input type='text' name='passidaddress' > <br></br>
+
+        ปัจจุบันนักศึกษา &nbsp; <input type='radio' name='work' valus='ไม่ได้ทำงาน'> ไม่ทำงาน &nbsp;
+        <input type='radio' name='work' valus='ทำงาน'> ทำงาน &nbsp; 
+        ตำแหน่ง <input type='text' name='lowork'> &nbsp;
+        เงินเดือน <input type='text' name='moneywork'> บาท/เดือน </dd><br></br>
+
+        <b> สถานที่ทำงาน : </b> <dd><br>
+
+        ชื่อสถานที่ทำงาน <input type='text' name='namework' > &nbsp;
+        เลขที่ <input type='text' name='numwork' > &nbsp;
+        หมูที่ <input type='text' name='mowork' > &nbsp;
+        ตรอก/ซอย <input type='text' name='soiwork' > <br></br>
+
+        ถนน <input type='text' name='streetwork' > &nbsp;
+        แขวง/ตำบล <input type='text' name='tubbonwork'> &nbsp;
+        เขต/อำเภอ <input type='text' name='ampulwork' > <br></br>
+
+        จังหวัด <input type='text' name='countywork' > &nbsp;
+        รหัสไปรษณีย์ <input type='text' name='idwork' > &nbsp;
+        โทรศัพท์ <input type='text' name='telwork' > <br></br>
+
+        e-mail <input type='text' name='emailwork' placeholder="( ถ้ามี )"> &nbsp;
+        line <input type='text' name='linework' placeholder='( ถ้ามี )'> &nbsp;
+        facebook <input type='text' name='facebookwork' placeholder="( ถ้ามี )"> </dd><br></br>
+
+        <center><input type="submit" value="submit" style="width:80px; font-size:16px;"> &nbsp;&nbsp; <input type="reset" value="reset" style="width:80px; font-size:16px;"></center>
+
+</form>
+</body>
+</html>
