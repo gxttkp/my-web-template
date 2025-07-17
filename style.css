@@ -92,7 +92,7 @@ a {
     color: #6D9886;
 }
 .imgShowMywork:hover {
-  transform: scale(1.1); /* ขยาย 10% */
+    transform: scale(1.1); /* ขยาย 10% */
 }
 
 @media (min-width: 768px) {
