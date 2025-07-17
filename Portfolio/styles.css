@@ -6,10 +6,10 @@
     box-sizing: border-box;
 }
 :root {
-    --white: #F8EDED;
+    --white: #f4f4f4;
 }
 html,body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 body {
@@ -21,14 +21,18 @@ body {
     padding: 0;
     margin: 0 auto;
 }
+[data-aos] {
+    will-change: transform, opacity;
+}
 
 .main-website {
     max-width: 100%;
-    height: 85vh;
+    height: 92vh;
     background: url("images/img-main.png");
     background-repeat: no-repeat;
     background-size: cover; /* ทำให้รูปเต็มพื้นที่ */
     background-position: center; /* จัดรูปภาพให้อยู่ตรงกลาง */
+    box-shadow: -1rem 1vh 2rem rgba(0, 0, 0, 0.3);
     border-radius: 0 0 0 20vw;
 
     .title-main-website {
@@ -40,7 +44,6 @@ body {
             color: var(--white);
             display: flex;
             justify-content: start;
-
             span {
                 color: #B43F3F;
                 margin-left: 20px;
@@ -62,7 +65,6 @@ body {
 
         .social-link {
             display: flex;
-            list-style: none;
             background-color: var(--white);
             box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
             border-radius: clamp(0.8rem, 1vw, 1.563rem);
@@ -72,10 +74,21 @@ body {
             
             li {
                 margin: 0.625rem;
+                list-style: none;
 
                 img {
                     width: clamp(1.75rem, 5vw, 3.74rem);
                     height: auto;
+                    transition: transform 0.3s ease;
+                    opacity: 75%;
+                }
+            }
+
+            a:hover {
+                justify-content: space-between;
+                img {
+                    transform: scale(1.05);
+                    opacity: 95%;
                 }
             }
         }
@@ -94,6 +107,7 @@ h5 {
 
 .about {
     padding: 20px;
+    margin-top: clamp(2vh, 10vw, 6vh);
 
     img {
         width: clamp(25rem, 10vw, 24rem);
@@ -133,36 +147,54 @@ h5 {
     padding-top: 5px;
     padding-bottom: 30px;
     padding: 20px;
+    margin-top: clamp(2vh, 10vw, 6vh);
 
-    .progress {
-        
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+
         .skill {
-            font-family: 'Roboto',sans-serif;
-            font-weight: 500;
+            font-family: 'Kanit',sans-serif;
+            font-weight: 600;
+            margin-bottom: 2vh;
 
-            display: flex;
-            justify-content: space-between;
-
-
-            .val {
-                font-style: normal;
+            p {
+                margin: 0 0 0.5vh 0;
+                font-size: 1.2em;
+                letter-spacing: 0.1rem;
             }
-            
-            .progress-bar-warp {
-                background: var(--white);
-                border-radius: 8px;
-                height: 20px;
-                overflow: hidden;
 
-                .progress-bar {
-                    background-color: aqua;
+            .skill-bar {
+                width: 100%;
+                background-color: #D7D7D7;
+                border-radius: 1vh;
+                overflow: hidden;
+                height: 2.5vh;
+
+                .skill-level {
+                    height: 100%;
+                    color: white;
+                    text-align: right;
+                    padding-right: 1vh;
+                    line-height: 2.5vh;
+                    font-size: 1em;
+                    border-radius: 1vh 0 0 1vh;
                 }
+
+                .html { width: 75%; background-color: #FE7743; }
+                .css { width: 75%; background-color: #3D74B6; }
+                .javascript { width: 50%; background-color: #FADA7A; }
+                .php { width: 20%; background-color: #9B7EBD; }
+                .c { width: 70%; background-color: #34699A; }
+                .python { width: 70%; background-color: #FFCB61; }
             }
         }
-    }
+    }  
 }
 
 .resume {
+    margin-top: clamp(2vh, 10vw, 6vh);
     h2 {
         margin-bottom: 30px;
     }
@@ -204,17 +236,69 @@ h5 {
     padding-top: 5px;
     padding-bottom: 30px;
     margin-top: 50px;
+    margin-top: clamp(2vh, 10vw, 6vh);
+
+    p {
+        font-family: 'Kanit', sans-serif;
+        font-weight: 800;
+        font-size: clamp(1rem, 3vw, 2rem);
+
+        a {
+            color: #8EACCD;
+        }
+    }
+
+    .nav-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .social-link {
+            display: flex;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            
+            li {
+                margin: 0.625rem;
+                list-style: none;
+
+                img {
+                    width: clamp(1.5rem, 5vw, 3.5rem);
+                    height: auto;
+                    transition: transform 0.3s ease-in-out;
+                    opacity: 75%;
+                }
+            }
+
+            a:hover {
+                justify-content: space-between;
+                img {
+                    transform: scale(1.1);
+                    opacity: 95%;
+                }
+            }
+        }
+    }
+
+    .line-txt-form {
+        background-color: var(--white);
+        width: 40%;
+        height: 1px;
+        opacity: 50%;
+        margin: 20px auto;
+    }
     
     .form {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 800;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 600;
         .card {
             color: var(--white);
             background-color: #373A40;
             border: none;
             
             label { 
-                font-size: clamp(1.2em, 3vw, 1.8em);
+                font-size: clamp(1.2rem, 3vw, 2rem)
             }
 
             .txt {
@@ -226,18 +310,34 @@ h5 {
                 height: 50px;
             }
         }
+
+        .error {
+            font-family: 'Kanit', sans-serif !important;
+            padding-left: 10px;
+            display: none;
+            color: #ff4c4c;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        input.invalid,
+        textarea.invalid {
+            border: 1px solid #ff4c4c;
+        }
     }
 
     button {
+        font-family: 'Kanit', sans-serif;
+        font-weight: 600;
         color: var(--white);
         background-color: #89C4E1;
-
-        margin-top: 10px    ;
+        margin-top: 10px;
+        transition: transform 0.2s ease;
     }
     button:hover {
         color: var(--white);
+        transform: scale(1.05);
         background-color: #677D6A;
-        box-shadow: 0 0 1rem rgba(255, 255, 255, 0.2);
     }
 }
 
@@ -252,6 +352,7 @@ textarea {
 input::placeholder,textarea::placeholder {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
     color: #373A40;
     opacity: 0.7;
     padding: 0;
@@ -261,3 +362,87 @@ input:focus,
 textarea:focus {
     outline: none;
 }
+
+/* Animation */
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0; /* เริ่มจากไม่มีความกว้าง */
+    border-right: 2px solid #fff; /* เส้นกระพริบ (cursor) */
+    animation: typing 3s steps(21, end) 3s infinite, blink 1s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 9ch }
+}
+/* เอฟเฟกต์เส้นกระพริบ */
+@keyframes blink {
+    50% { border-right-color: transparent; }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition-property: opacity, transform;
+    transition-timing-function: ease;
+    transition-duration: 2s; /* default 3s */
+}
+
+.fade-in.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/* media */
+@media (max-width: 768px) {
+    .main-website {
+        height: 80vh;
+        background-position: 87% center; /* หรือ right center */
+        border-radius: 0 0 0 10vw; /* ปรับมุมให้เล็กลงถ้าต้องการ */
+    }
+    .social.nav-social {
+        margin-top: -20px;
+    }
+
+    .skills .container {
+        width: 95%;
+    }
+
+    .skills .skill p {
+        font-size: 1em;
+    }
+
+    .skills .skill-bar {
+        height: 2vh;
+    }
+
+    .skills .skill-level {
+        font-size: 0.9em;
+        line-height: 2vh;
+        padding-right: 0.5vh;
+    }
+}
+
+/* Responsive สำหรับมือถือแนวตั้ง */
+@media (max-width: 576px) {
+    .social .nav-social {
+        margin-top: -25px;
+    }
+    .skills .skill p {
+        font-size: 0.95em;
+    }
+
+    .skills .skill-bar {
+        height: 1.8vh;
+    }
+
+    .skills .skill-level {
+        font-size: 0.8em;
+        line-height: 1.8vh;
+        padding-right: 0.3vh;
+    }
+}
+
