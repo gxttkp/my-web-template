@@ -25,7 +25,7 @@ body {
     will-change: transform, opacity;
 }
 
-.main-website {
+.hero {
     max-width: 100%;
     height: 92vh;
     background: url("images/img-main.png");
@@ -34,6 +34,7 @@ body {
     background-position: center; /* จัดรูปภาพให้อยู่ตรงกลาง */
     box-shadow: -1rem 1vh 2rem rgba(0, 0, 0, 0.3);
     border-radius: 0 0 0 20vw;
+    background-position: 87% center; /* หรือ right center */
 
     .title-main-website {
         padding-top: 10rem;
@@ -56,6 +57,7 @@ body {
     }
 }
 
+/*Social*/
 .social {
     .nav-social {
         display: flex;
@@ -105,6 +107,7 @@ h5 {
     margin-top: 20px;
 }
 
+/* ABOUT */
 .about {
     padding: 20px;
     margin-top: clamp(2vh, 10vw, 6vh);
@@ -141,13 +144,135 @@ h5 {
 
 }
 
+
+/* My Projects */
+.project {
+    color: var(--white);
+    background-color: #373A40;
+    padding: 30px;
+    margin-top: 50px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+}
+
+.card-scroll-wrapper {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+    cursor: grab;
+}
+.card-scroll-wrapper.dragging {
+    cursor: grabbing;
+}
+/*แสดงแบบเลื่อน*/
+.card-scroll-wrapper.collapsed {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.project-card-container.collapsed {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+/*แสดงทั้งหมด*/
+.card-scroll-wrapper.expanded {
+    overflow: visible;
+}
+.project-card-container.expanded {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1vw));
+    width: 100%;
+}
+
+.project-card-container {
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    width: max-content;
+    cursor: grab;
+}
+
+.project .card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: auto;
+    background-color: var(--white);
+    opacity: 90%;
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in;
+}
+
+.project .card img {
+    width: auto;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project .card h2 {
+    font-size: clamp(0.7rem, 3vw, 1.5rem);
+    font-weight: 600;
+    color: #373A40;
+    margin: 10px 0 5px;
+    letter-spacing: 0.5px;
+    text-align: start;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.project .card p {
+    color: #373A40;
+    font-size: clamp(0.5rem, 2vw, 1.1rem);
+    font-weight: 500;
+    text-align: start;
+    opacity: 90%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.see-all-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.see-all-btn {
+    font-family: 'Kanit', sans-serif;
+    padding: 10px 25px;
+    background-color: #B43F3F;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.see-all-btn:hover {
+    background-color: #932f2f;
+}
+
+.project .card:hover {
+    transform: scale(1.01);
+    opacity: 95%;
+}
+
+/*
 .skills {
     color: var(--white);
     background-color: #373A40;
     padding-top: 5px;
     padding-bottom: 30px;
     padding: 20px;
-    margin-top: clamp(2vh, 10vw, 6vh);
 
     .container {
         width: 90%;
@@ -191,8 +316,10 @@ h5 {
             }
         }
     }  
-}
+}*/
 
+
+/* RESUME */
 .resume {
     margin-top: clamp(2vh, 10vw, 6vh);
     h2 {
@@ -230,12 +357,12 @@ h5 {
     }
 }
 
+/* CONTACT */
 .contact {
     color: var(--white);
     background-color: #373A40;
     padding-top: 5px;
     padding-bottom: 30px;
-    margin-top: 50px;
     margin-top: clamp(2vh, 10vw, 6vh);
 
     p {
@@ -369,7 +496,7 @@ textarea:focus {
     white-space: nowrap;
     width: 0; /* เริ่มจากไม่มีความกว้าง */
     border-right: 2px solid #fff; /* เส้นกระพริบ (cursor) */
-    animation: typing 3s steps(21, end) 3s infinite, blink 1s step-end infinite;
+    animation: typing 3s steps(9, end) 3s infinite, blink 1s step-end infinite;
 }
 @keyframes typing {
     from { width: 0 }
@@ -398,9 +525,8 @@ textarea:focus {
 
 /* media */
 @media (max-width: 768px) {
-    .main-website {
-        height: 80vh;
-        background-position: 87% center; /* หรือ right center */
+    .hero {
+        max-height: 80vh;
         border-radius: 0 0 0 10vw; /* ปรับมุมให้เล็กลงถ้าต้องการ */
     }
     .social.nav-social {
