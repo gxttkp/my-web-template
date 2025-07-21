@@ -17,11 +17,21 @@ function checkFade() {
     }
     });
 }
-
+// เมื่อเลื่อนหรือโหลดหน้า ให้เช็คเอฟเฟกต์ fade
 window.addEventListener('scroll', checkFade);
-window.addEventListener('load', checkFade);
+window.addEventListener('load', () => {
+    checkFade();
+    updateScrollButtons();
+});
 
+// เมื่อเลื่อนหรือโหลดหน้า ให้เช็คเอฟเฟกต์ fade
+window.addEventListener('scroll', checkFade);
+window.addEventListener('load', () => {
+    checkFade();
+    updateScrollButtons();
+});
 
+// Validate ฟอร์มติดต่อ
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault(); // ป้องกันการส่ง form ชั่วคราว
 
@@ -30,7 +40,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     const fields = [
         { id: "name", message: "Please enter your name" },
         { id: "email", message: "Please enter your E-mail" },
-        { id: "subject", message: "Please enter your tilte" },
+        { id: "subject", message: "Please enter your title" },
         { id: "detail", message: "Please enter your detail" }
     ];
 
@@ -39,79 +49,81 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         const error = input.nextElementSibling;
 
         if (!input.value.trim()) {
-        input.classList.add("invalid");
-        error.textContent = field.message;
-        error.style.display = "block";
-        valid = false;
+            input.classList.add("invalid");
+            error.textContent = field.message;
+            error.style.display = "block";
+            valid = false;
         } else {
-        input.classList.remove("invalid");
-        error.style.display = "none";
+            input.classList.remove("invalid");
+            error.style.display = "none";
         }
     });
 
     if (valid) {
-        this.submit(); // ถ้าครบ ส่งฟอร์มได้
+        this.submit(); // ส่งฟอร์มหากครบ
     }
 });
 
+// Toggle ปุ่ม See All / See Less
 const btn = document.getElementById('toggleProjects');
 const wrapper = document.querySelector('.card-scroll-wrapper');
 const container = document.querySelector('.project-card-container');
+const scrollLeftBtn = document.getElementById('scrollLeft');
+const scrollRightBtn = document.getElementById('scrollRight');
 
-let isDown = false;
-let startX;
-let scrollLeft;
-
-// ปุ่ม toggle แสดง/ซ่อนทั้งหมด
 btn.addEventListener('click', () => {
     const isCollapsed = btn.getAttribute('data-state') === 'collapsed';
 
     if (isCollapsed) {
-    // เปลี่ยนเป็นแบบแสดงทั้งหมด
-    wrapper.classList.remove('collapsed');
-    wrapper.classList.add('expanded');
-    container.classList.remove('collapsed');
-    container.classList.add('expanded');
-    btn.textContent = 'See Less';
-    btn.setAttribute('data-state', 'expanded');
+        // แสดงทั้งหมด
+        wrapper.classList.remove('collapsed');
+        wrapper.classList.add('expanded');
+        container.classList.remove('collapsed');
+        container.classList.add('expanded');
+        btn.textContent = 'SEE LESS';
+        btn.setAttribute('data-state', 'expanded');
+
+        // ซ่อนปุ่มเลื่อน
+        scrollLeftBtn.style.display = 'none';
+        scrollRightBtn.style.display = 'none';
     } else {
-    // กลับสู่แบบ scroll แนวนอน
-    wrapper.classList.remove('expanded');
-    wrapper.classList.add('collapsed');
-    container.classList.remove('expanded');
-    container.classList.add('collapsed');
-    btn.textContent = 'See All';
-    btn.setAttribute('data-state', 'collapsed');
+        // กลับสู่เลื่อนแนวนอน
+        wrapper.classList.remove('expanded');
+        wrapper.classList.add('collapsed');
+        container.classList.remove('expanded');
+        container.classList.add('collapsed');
+        btn.textContent = 'SEE ALL';
+        btn.setAttribute('data-state', 'collapsed');
+
+        // แสดงปุ่มเลื่อน
+        scrollLeftBtn.style.display = 'block';
+        scrollRightBtn.style.display = 'block';
+
+        updateScrollButtons(); // อัพเดตสถานะปุ่มเลื่อน
     }
 });
 
-// Mouse drag to scroll (ทำงานเฉพาะตอน collapsed)
-wrapper.addEventListener('mousedown', (e) => {
-    if (wrapper.classList.contains('expanded')) return;
-    isDown = true;
-    wrapper.classList.add('dragging');
-    startX = e.pageX - wrapper.offsetLeft;
-    scrollLeft = wrapper.scrollLeft;
+// ปุ่มเลื่อนซ้าย
+scrollLeftBtn.addEventListener('click', () => {
+    wrapper.scrollBy({
+        left: -300,
+        behavior: 'smooth'
+    });
 });
 
-wrapper.addEventListener('mouseleave', () => {
-    isDown = false;
-    wrapper.classList.remove('dragging');
+// ปุ่มเลื่อนขวา
+scrollRightBtn.addEventListener('click', () => {
+    wrapper.scrollBy({
+        left: 300,
+        behavior: 'smooth'
+    });
 });
 
-wrapper.addEventListener('mouseup', () => {
-    isDown = false;
-    wrapper.classList.remove('dragging');
-});
+// ฟังก์ชันอัพเดตสถานะปุ่มเลื่อน (ซ่อนเมื่อเลื่อนไปสุด)
+function updateScrollButtons() {
+    scrollLeftBtn.style.display = wrapper.scrollLeft <= 0 ? 'none' : 'block';
+    scrollRightBtn.style.display = (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 1) ? 'none' : 'block';
+}
 
-wrapper.addEventListener('mousemove', (e) => {
-    if (!isDown || wrapper.classList.contains('expanded')) return;
-    e.preventDefault();
-    const x = e.pageX - wrapper.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    wrapper.scrollLeft = scrollLeft - walk;
-});
-
-
-
-
+// เรียก updateScrollButtons เมื่อ wrapper มีการเลื่อน
+wrapper.addEventListener('scroll', updateScrollButtons);
