@@ -218,7 +218,6 @@ h5 {
                 flex: 0 0 auto;
                 width: 100%;
                 max-width: 250px;
-                min-width: 200px;
                 height: auto;
                 background-color: var(--white);
                 opacity: 85%;
@@ -250,11 +249,12 @@ h5 {
                     }
 
                     h2 {
-                        font-size: clamp(0.7rem, 3vw, 1.5rem);
+                        font-size: clamp(1.2rem, 3vw, 2rem);
                         font-weight: 600;
                         color: #373A40;
                         padding: 5px;
                         margin: 10px 0 5px;
+                        margin-top: -5px;
                         letter-spacing: 0.5px;
                         text-align: start;
                         word-wrap: break-word;
@@ -265,15 +265,20 @@ h5 {
 
                     p {
                         color: #373A40;
-                        font-size: clamp(0.5rem, 2vw, 1.1rem);
+                        font-size: clamp(0.7rem, 3vw, 1.2rem);
                         font-weight: 500;
                         padding: 5px;
+                        margin-top: -10px;
                         text-align: start;
                         opacity: 90%;
                         word-wrap: break-word;
                         overflow-wrap: break-word;
                         white-space: normal;
-                        display: block;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;       /* จำกัด 2 บรรทัด */
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
             }
@@ -320,14 +325,15 @@ h5 {
         
         .see-all-btn {
             font-family: 'Kanit', sans-serif;
-            padding: 10px 25px;
+            font-weight: 600;
+            padding: 10px 10px;
             background-color: #B43F3F;
-            color: #fff;
+            color: var(--white);
             border: none;
             border-radius: 10px;
             opacity: 90%;
             cursor: pointer;
-            font-weight: bold;
+            margin-top: 10px;
             transition: background-color 0.3s ease;
         }
         .see-all-btn:hover {
@@ -530,7 +536,7 @@ h5 {
         color: var(--white);
         background-color: #B43F3F;
         margin-top: 10px;
-        transition: transform 0.2s ease;
+        transition: transform 0.3s ease;
         border-radius: 10px;
         opacity: 90%;
     }
