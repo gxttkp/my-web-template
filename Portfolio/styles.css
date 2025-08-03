@@ -21,9 +21,6 @@ body {
     padding: 0;
     margin: 0 auto;
 }
-[data-aos] {
-    will-change: transform, opacity;
-}
 
 .hero {
     max-width: 100%;
@@ -275,8 +272,8 @@ h5 {
                         overflow-wrap: break-word;
                         white-space: normal;
                         display: -webkit-box;
-                        -webkit-line-clamp: 2;       /* จำกัด 2 บรรทัด */
-                        -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;       /* จำกัด 2 บรรทัด */
+                                -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
                     }
