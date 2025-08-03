@@ -72,7 +72,7 @@ body {
             padding: 0;
             
             li {
-                margin: 0.625rem;
+                margin: 8px;
                 list-style: none;
 
                 img {
@@ -461,7 +461,7 @@ h5 {
             padding: 0;
             
             li {
-                margin: 0.625rem;
+                margin: 8px;
                 list-style: none;
 
                 img {
