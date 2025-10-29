@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
 </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --white: #F9F3EF;
+        }
+        html,body {
+            overflow-x: hidden !important;
+        }
+
+        body {
+            font-family: 'kanit', sans-serif;
+            background-color: #222831;
+            color: var(--white);
+        }
+
+
+        input {
+            border-radius: 5px;
+            max-width: 150px;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #2c2c2c;
+            padding: 5px;
+        }
+        input::placeholder {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 100;
+            padding: 0;
+        }
+        input:focus {
+            outline: none;
+        }
+        input[type="radio"] {
+            margin: 3px;
+        }
+
+    </style>
 <body>
     <form action="showform.php" method="POST">
         <h3>ข้อมูลนักศึกษา : </h3> <dd>
