@@ -4,278 +4,217 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🏆 IPSC Real-Time Scoreboard</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <style>
-        /* CSS Styling */
-        body { 
-            font-family: 'Kanit', sans-serif; 
-            margin: 0; 
-            padding: 20px; 
-            background-color: #F7F7F7; 
-            color: #333; 
-        }
-        .container { 
-            max-width: 1200px; 
-            margin: auto; 
-            background: #FAF7F3; 
-            padding: 20px; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-        }
-        header { text-align: center; margin-bottom: 20px; }
-        h1, h2 { color: #004d40; }
-        .total-competitors { font-weight: bold; color: #1C352D; margin-bottom: 10px; }
 
-        /* --- CARD VIEW STYLES --- */
-        #scores-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-            gap: 20px;
-            margin-top: 20px;
-        }
 
-        .competitor-card {
-            background-color: #f0fdfc;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-            border-left: 8px solid #1C352D; 
-            position: relative;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .competitor-card:hover:not(.disqualified-card) {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-        
-        .card-details {
-            flex-grow: 1;
-            padding-left: 15px;
-        }
+<style>
+body{
+    font-family:'Kanit',sans-serif;
+    background:#F7F7F7;
+    padding:20px;
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    background:#FAF7F3;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 4px 6px rgba(0,0,0,.1);
+}
+h1{text-align:center;color:#004d40}
 
-        .card-rank {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background-color: #004d40;
-            color: white;
-            font-size: 1.4em;
-            font-weight: 700;
-            border-radius: 5px;
-            padding: 5px 10px;
-            min-width: 30px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
+/* ===== TOGGLE ===== */
+.toggle{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+.toggle button{
+    padding:10px 20px;
+    border:none;
+    cursor:pointer;
+    background:#ccc;
+    font-weight:bold;
+}
+.toggle button.active{
+    background:#004d40;
+    color:white;
+}
 
-        .card-photo-container {
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            overflow: hidden;
-            background-color: #eee;
-        }
-        .card-photo-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .card-photo-container i {
-            font-size: 50px;
-            color: #1C352D;
-        }
+/* ===== ALL COMPETITORS ===== */
+.all-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+@media(max-width:992px){
+    .all-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:576px){
+    .all-grid{grid-template-columns:1fr}
+}
+.all-card{
+    background:#f0fdfc;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 4px rgba(0,0,0,.1);
+}
+.all-card img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+}
+.code{
+    font-weight:bold;
+    color:#004d40;
+}
 
-        .card-name {
-            font-size: 1.2em;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #333;
-        }
-        .card-time {
-            font-family: 'Kanit', monospace;
-            font-size: 1.4em;
-            font-weight: 700;
-            color: #d32f2f; 
-        }
-        /* Style สำหรับเวลา 0.000 */
-        .card-time.initial {
-            color: #004d40; /* สีเขียวเมื่อยังไม่ยิง */
-        }
+/* ===== SCOREBOARD ===== */
+.score-card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 4px rgba(0,0,0,.1);
+}
+.rank{
+    font-weight:700;
+    color:#004d40;
+}
+.time{
+    font-weight:700;
+    color:#d32f2f;
+}
+.running{
+    background:#e8f5e9;
+}
+.dq{
+    background:#8B0000;
+    color:white;
+}
+.dq .time{color:#FFC107}
 
-        /* --- DISQUALIFIED STYLES --- */
-        .disqualified-card {
-            background-color: #8B0000 !important; 
-            border-left: 8px solid #FFC107;
-            color: white; 
-        }
-        .disqualified-card .card-rank {
-            background-color: #FFC107;
-            color: #333;
-        }
-        .disqualified-card .card-name,
-        .disqualified-card .card-time {
-            color: white !important;
-        }
-        .disqualified-card .card-time {
-            font-size: 1.2em;
-        }
-        .disqualified-card .card-photo-container i {
-            color: white !important;
-        }
+/* --- Floating Admin Button --- */
+#admin-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1C352D;
+    padding: 12px 18px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+#admin-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+#admin-link:hover {
+    background: #004d40;
+}
 
-        /* --- Floating Admin Link --- */
-        .admin-link-floating {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #1C352D;
-            color: white;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 8px;
-            text-decoration: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            transition: background-color 0.2s;
-            z-index: 1000;
-        }
-
-        .admin-link-floating:hover {
-            background-color: #004d40;
-        }
-    </style>
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <header>
-            <h1>🏆 IPSC Real-Time Scoreboard</h1>
-        </header>
-        
-        <section id="public-score-display">
-            <h2>📊 ตารางคะแนนการแข่งขัน (อัปเดตอัตโนมัติ)</h2>
-            <p class="total-competitors">จำนวนผู้เข้าแข่งขันทั้งหมด: <span id="competitor-count">0</span> คน</p>
-            
-            <div id="scores-grid"></div>
-            
-            <p id="no-data-message" style="text-align: center; margin-top: 20px; display: none;">ยังไม่มีผู้เข้าแข่งขัน</p>
-        </section>
-    </div>
+<div class="container">
 
-    <!-- Floating Admin Link -->
-    <a href="admin.html" class="admin-link-floating">ไปที่หน้า Admin</a>
+<h1>🏆 IPSC COMPETITION</h1>
 
-    <script>
-        const STORAGE_KEY = 'ipscCompetitors';
-        let competitors = [];
-        let fetchInterval;
+<div class="toggle">
+    <button id="btnAll" class="active" onclick="showAll()">📋 รายชื่อผู้เข้าแข่งขัน</button>
+    <button id="btnScore" onclick="showScore()">🏆 คะแนนการแข่งขัน</button>
+</div>
 
-        function loadCompetitors() {
-            const data = localStorage.getItem(STORAGE_KEY);
-            if (data) {
-                competitors = JSON.parse(data);
-                competitors.forEach(c => {
-                    if (typeof c.isDQ === 'undefined') {
-                        c.isDQ = false;
-                    }
-                });
-            }
-            renderScoreboard();
-            startScoreFetching(); 
-        }
+<div id="allView"></div>
+<div id="scoreView" style="display:none"></div>
 
-        function renderScoreboard() {
-            const disqualifiedCompetitors = competitors.filter(c => c.isDQ);
-            const competitorsWithTime = competitors.filter(c => !c.isDQ && c.time > 0).sort((a, b) => a.time - b.time);
-            const competitorsWithoutTime = competitors.filter(c => !c.isDQ && c.time === 0).sort((a, b) => a.id - b.id); 
-            const finalDisplayList = competitorsWithTime.concat(competitorsWithoutTime).concat(disqualifiedCompetitors);
+</div>
 
-            const grid = document.getElementById('scores-grid');
-            const competitorCountDisplay = document.getElementById('competitor-count');
-            const noDataMessage = document.getElementById('no-data-message');
-            
-            grid.innerHTML = '';
-            competitorCountDisplay.textContent = competitors.length;
+<p id="admin-link">
+    <a href="admin.html">ไปที่หน้า Admin</a>
+</p>
 
-            if (competitors.length === 0) {
-                noDataMessage.textContent = 'ยังไม่มีผู้เข้าแข่งขัน';
-                noDataMessage.style.display = 'block';
-                return;
-            } else {
-                noDataMessage.style.display = 'none';
-            }
-            
-            finalDisplayList.forEach((c) => {
-                const isRanked = c.time > 0;
-                const rank = c.isDQ ? 'DQ' : (
-                    isRanked 
-                    ? competitorsWithTime.findIndex(r => r.id === c.id) + 1 
-                    : '-' 
-                );
-                const timeText = c.isDQ ? 'DISQUALIFIED' : (isRanked ? c.time.toFixed(3) + ' วินาที' : '0.000 วินาที');
-                const timeClass = isRanked ? '' : 'initial'; 
-                
-                const card = document.createElement('div');
-                card.className = c.isDQ ? 'competitor-card disqualified-card' : 'competitor-card';
-                
-                let photoHtml;
-                if (c.photo) {
-                    photoHtml = `<img src="${c.photo}" alt="${c.name}">`;
-                } else {
-                    const iconColor = c.isDQ ? 'white' : '#004d40';
-                    photoHtml = `<i class="bi bi-person-fill" style="font-size: 50px; color: ${iconColor};"></i>`;
-                }
+<script>
+let competitors=[];
 
-                card.innerHTML = `
-                    <div class="card-rank">${rank}</div>
-                    <div class="card-photo-container">${photoHtml}</div>
-                    <div class="card-details">
-                        <div class="card-name">${c.name}</div>
-                        <div class="card-time ${timeClass}">${timeText}</div>
-                    </div>
-                `;
-                
-                grid.appendChild(card);
-            });
-        }
-        
-        function startScoreFetching() {
-            if (fetchInterval) clearInterval(fetchInterval);
-            fetchInterval = setInterval(fetchRealTimeScores, 5000); 
-            fetchRealTimeScores();
-        }
+async function load(){
+    const res = await fetch('api/getCompetitors.php');
+    competitors = await res.json();
+    renderAll();
+    renderScore();
+}
+setInterval(load,3000);
+load();
 
-        async function fetchRealTimeScores() {
-            const mockData = competitors.map(c => ({ name: c.name, time: c.time }));
-            processFetchedScores(mockData); 
-        }
+/* ===== TOGGLE ===== */
+function showAll(){
+    btnAll.classList.add('active');
+    btnScore.classList.remove('active');
+    allView.style.display='block';
+    scoreView.style.display='none';
+}
+function showScore(){
+    btnScore.classList.add('active');
+    btnAll.classList.remove('active');
+    allView.style.display='none';
+    scoreView.style.display='block';
+}
 
-        function processFetchedScores(fetchedScores) {
-            let updated = false;
-            fetchedScores.forEach(score => {
-                const index = competitors.findIndex(c => c.name === score.name);
-                if (index !== -1 && !competitors[index].isDQ) {
-                    const newTime = parseFloat(score.time) || 0;
-                    if (competitors[index].time !== newTime) {
-                        competitors[index].time = newTime;
-                        updated = true;
-                    }
-                }
-            });
+/* ===== ALL COMPETITORS ===== */
+function renderAll(){
+    let html='<div class="all-grid">';
+    competitors.forEach(c=>{
+        html+=`
+        <div class="all-card">
+            <img src="${c.photo || 'https://via.placeholder.com/80'}">
+            <h3>${c.name}</h3>
+            <div class="code">${c.code}</div>
+        </div>`;
+    });
+    html+='</div>';
+    allView.innerHTML=html;
+}
 
-            if (updated) {
-                localStorage.setItem(STORAGE_KEY, JSON.stringify(competitors));
-                renderScoreboard();
-            }
-        }
+/* ===== SCOREBOARD ===== */
+function renderScore(){
+    const sorted=[...competitors]
+        .filter(c=>!c.is_dq && c.time>0)
+        .sort((a,b)=>a.time-b.time);
 
-        window.onload = loadCompetitors;
-    </script>
+    const dqList = competitors.filter(c=>c.is_dq);
+
+    let html='';
+    sorted.forEach((c,i)=>{
+        html+=`
+        <div class="score-card ${c.is_running ? 'running' : ''}">
+            <div class="rank">#${i+1} ${c.name}</div>
+            <div class="time">${c.time.toFixed(3)} s</div>
+        </div>`;
+    });
+
+    dqList.forEach(c=>{
+        html+=`
+        <div class="score-card dq">
+            <div class="rank">${c.name}</div>
+            <div class="time">DQ</div>
+        </div>`;
+    });
+
+    scoreView.innerHTML=html;
+}
+</script>
+
 </body>
 </html>

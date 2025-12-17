@@ -1,0 +1,234 @@
+/* =====================================
+    GLOBAL STYLE
+===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background: #FCF9E1;
+    color: #37353E;
+}
+
+/* =====================================
+    CONTAINER & TITLE
+===================================== */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* =====================================
+    MENU BUTTONS
+===================================== */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.menu-btn,
+.menu button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: #faf8f1;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu-btn.active,
+.menu button:hover {
+    background: #90AB8B;
+    color: #ffffff;
+}
+
+.logout {
+    margin-left: auto;
+    text-decoration: none;
+    color: #37353E;
+}
+
+/* =====================================
+    SECTION / TAB
+===================================== */
+.section,
+.tab {
+    display: none;
+}
+
+.section.active,
+.tab.active {
+    display: block;
+}
+
+/* =====================================
+    GRID & CARD
+===================================== */
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+/* Responsive grid */
+@media (min-width: 992px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+    .grid { grid-template-columns: repeat(1, 1fr); }
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card .info h3 {
+    font-size: 18px;
+}
+
+/* =====================================
+    REALTIME STATUS COLORS
+===================================== */
+.card.running {
+    background: #90AB8B;
+    color: #faf8f1;
+}
+
+.card.dq {
+    background: #FACE68;
+}
+
+.card.dq img {
+    filter: grayscale(100%);
+}
+
+/* =====================================
+    LOGIN PAGE
+===================================== */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+    width: 320px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #5A7863;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.error {
+    margin-top: 10px;
+    color: #FD7979;
+}
+
+/* =====================================
+    ADMIN ACTION BUTTONS
+===================================== */
+.action-buttons {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.action-buttons button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #faf8f1;
+    cursor: pointer;
+}
+
+.action-buttons .start:hover {
+    background: #547792;
+    color: #ffffff;
+}
+
+.action-buttons .dq:hover {
+    background: #D34E4E;
+    color: #ffffff;
+}
+
+/* =====================================
+    FORMS
+===================================== */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: #5A7863;
+    color: #ffffff;
+    cursor: pointer;
+}
