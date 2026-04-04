@@ -216,8 +216,7 @@ h5 {
                 width: 100%;
                 max-width: 250px;
                 height: auto;
-                background-color: var(--white);
-                opacity: 85%;
+                background-color: white;
                 border-radius: 12px;
                 padding: 0;
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -280,7 +279,7 @@ h5 {
                 }
             }
             .card:hover {
-                opacity: 100%;
+                opacity: 95%;
                 box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
             }
         }
