@@ -279,7 +279,7 @@ h5 {
                 }
             }
             .card:hover {
-                opacity: 95%;
+                background-color: #FFF6F6;
                 box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
             }
         }
