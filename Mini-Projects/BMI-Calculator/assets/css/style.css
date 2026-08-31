@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Passero+One&display=swap');
+
+* {
+    font-family:  'Kanit', sans-serif;
+    color: #303841;
+}
+
+.wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 30px;
+    box-shadow: 0 3px 5px rgba(75, 74, 117, 0.5);
+    margin-bottom: 30px;
+}
+
+.calc-bmi_row {
+    margin: 0 auto; 
+    max-width: 350px;
+}
+
+.screen {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    margin: 15px auto;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(7, 7, 7, 0.3);
+}
+
+.result-text {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 5px 0
+}
+
+.screen_show {
+    font-size: 2rem;
+    opacity: 0.95;
+}
+
+.bmi_row {
+    display: flex;
+    margin: 5% 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_title {
+    align-self: flex-start;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.field-text {
+    font-size: 30px;
+    color: #303841;
+    outline: none;
+    border: none;
+    margin: 0 20px;
+    align-items: flex-start;
+    max-width: 100px;
+
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #2b2b2c;
+}
+
+.field-text::-webkit-inner-spin-button,
+.field-text::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.txt_box p {
+    align-self: flex-end;
+    font-family:  'Kanit', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.bmi-btn {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    width: 350px;
+    margin: 10px auto;
+    border: none;
+    background-color: #73A5CA;
+    border-radius: 5px;
+    padding: 5px;
+}
+.bmi-btn:hover {
+    background-color: #76ABAE;
+}
+
+.calc-bmi-data {
+    margin: 10px;
+    text-align: center;
+}
+
+.bmi_num {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.screen_show[data-bmi-txt] {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.bmi-thin {
+    color: #3368A0;
+}
+
+.bmi-normal {
+    color: #6A7E3F;
+}
+
+.bmi-overweight {
+    color: #e6bf56;
+}
+
+.bmi-overweight-one {
+    color: #E68457;
+}
+
+.bmi-overweight-two {
+    color: #F24C3D;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI-Calculator</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        
+        <div class="calc-bmi_row">
+            <div class="screen">
+                <p class="result-text">ค่า BMI ของคุณ</p>
+                <div class="screen_show" data-bmi>- -</div>
+                <div class="screen_show" data-bmi-txt></div>
+            </div>
+            
+            <div class="calc_bmi_row">
+                <div class="bmi_row">
+                    <p class="header_title">น้ำหนักตัว</p>
+                    <input type="number" name="mass" id="field-mass" class="field-text">
+                    <div class="txt_box">
+                        <p>กิโลกรัม</p>
+                    </div>
+                </div>
+
+                <div class="bmi_row">
+                    <p class="header_title">ส่วนสูง</p>
+                    <input type="number" name="height" id="field-height" class="field-text">
+                    <div class="txt_box">
+                        <p>เซนติเมตร</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="bmi-btn" bmi-btn>คำนวณ</button>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
