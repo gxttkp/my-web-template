@@ -6,8 +6,96 @@
     <title>Grade Calculator</title>
 
     <link rel="icon" type="image/png" href="assets/images/exam.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+    <div class="wrapper bg-header">
+
+            <!-- ================ TITLE ================ -->
+            <p class="header_title">Grade Calculator</p>
+            <p class="header_detali">โปรแกรมสำหรับคำนวณผลการเรียน</p>
+
+            <!-- ================= TAB ================= -->
+            <div class="tab-menu">
+                <button class="menu-btn active" id="gpa-btn">GPA</button>
+                <button class="menu-btn" id="gpax-btn">GPAX</button>
+            </div>
+
+    </div>
+
+    <div class="wrapper">
+        <!-- =============== GPA =============== -->
+         <div class="section" id="gpaSection">
+            <h2 class="sectionTitle">GPA - <span>เกรดรายเทอม</span></h2>
+            
+            <div class="bg-table">
+
+                <!-- == TITLE TABLE == -->
+                <div class="bg-gpaTitle">
+                    <div class="gpaTitle col-1">No.</div>
+                    <div class="gpaTitle">Subject name</div>
+                    <div class="gpaTitle">Grade</div>
+                    <div class="gpaTitle">Credit</div>
+                    <div class="gpaTitle">Remove</div>
+                </div>
+
+                <div class="bg-subject">
+
+                    <!-- == NO == -->
+                    <div class="card-no">
+                        <span class="lg:hidden">No.</span>
+                        <span>1</span>
+                    </div>
+
+                    <!-- == SUBJECT == -->
+                    <div class="card-subject">
+                        <span class="lg:hidden">Subject Name</span>
+                        <input type="text" class="subject-input" placeholder="กรอกรายวิชา" value>
+                    </div>
+
+                    <!-- == GRADE == -->
+                    <div class="card-grade">
+                        <span class="lg:hidden">Grade</span>
+                        <select class="grade-select">
+                            <option value="">เลือกเกรด</option>
+                            <option value="4">A</option>
+                            <option value="3.5">B+</option>
+                            <option value="3">B</option>
+                            <option value="2.5">C+</option>
+                            <option value="2">C</option>
+                            <option value="1.5">D+</option>
+                            <option value="1">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </div>
+
+                    <!-- == CREDIT == -->
+                    <div class="card-credit">
+                        <span class="lg:hidden">Credit</span>
+                         <select class="credit-select">
+                            <option value="">เลือกหน่วยกิต</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+
+                    <!-- == REMOVE ROW == -->
+                    <div class="card-remove">
+                        <span class="lg:hidden">🗑️</span>
+                         <button type="button" aria-haspopup="Remove subject" class="remove-row"></button>
+                    </div>
+
+                </div>
+
+                <button type="button" class="add-row" id="add-row">+ add row</button>
+            </div>
+
+            <button class="gpaCalculator" id="gpaCalculator">Calculator</button>
+         </div>
+    </div>
 </body>
 </html>
